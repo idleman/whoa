@@ -1,0 +1,19 @@
+{
+  "name": "whoa",
+  "version": "0.0.1",
+  "description": "An extreme lightweight database migration tool primary for ECMAScript modules",
+  "author": "Fredrik Olofsson <evoozer@gmail.com>",
+  "bin": {
+    "whoa": "./bin/whoa.mjs"
+  },
+  "scripts": {
+    "test": "sofia \"./src/**/*.test.mjs\""
+  },
+  "dependencies": {
+    "fs-extra": "^9.0.1",
+    "mysql2": "^2.1.0"
+  },
+  "devDependencies": {
+    "sofia": "https://github.com/idleman/sofia.git"
+  }
+}
