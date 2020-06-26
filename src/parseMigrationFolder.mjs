@@ -20,7 +20,7 @@ function validateMigrationHeader(migration, got) {
   Object.entries(expected)
     .forEach(([key, value]) => {
       if(got[key] !== value) {
-        throw new Error(`Migration (${ID}): Incorrect value for ("${key}"). Expected (value="${value}"), but got (value="${got[key]}"),`);
+        throw new Error(`Migration (${id}): Incorrect value for ("${key}"). Expected (value="${value}"), but got (value="${got[key]}"),`);
       }
     });
   
