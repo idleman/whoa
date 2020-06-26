@@ -11,8 +11,8 @@ function validateMigrationHeader(migration, got) {
   const expected = {
     id,
     year:  revision.getFullYear(),
-    month:  revision.getUTCMonth() + 1,
-    day: revision.getUTCDate(),
+    month:  revision.getMonth() + 1,
+    day: revision.getDate(),
     version: migration.version
   };
 
@@ -65,7 +65,7 @@ export default async function parseMigrationFolder(dir, { id, name, history }) {
   const hash = getPrimaryHashCode(primary, getSecondaryHashCode(secondary));
   if(migration) {
     if(hash !== migration.hash) {
-      throw new Error(`Migration (${ID}): Hash mismatch. Expected (hash=${migration.hash}), but got (hash=${hash})`);
+      throw new Error(`Migration (${migration.id}): Hash mismatch. Expected (hash=${migration.hash}), but got (hash=${hash})`);
     }
     return null;
   }

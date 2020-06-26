@@ -2,6 +2,7 @@ import mysql from 'mysql2/promise.js';
 
 const supported_drivers = ['mysql'];
 
+const matchCommentsRegex = /\/\*[\s\S]*?\*\/|\/\/.*/g;
 export default async function getDatabaseConnection({ host, user, password, database, driver }) {
   if(driver !== 'mysql') {
     throw new Error(`Unsupported driver ("${driver}"). Supported drivers: ${supported_drivers.join(', ')}`);
@@ -15,7 +16,9 @@ export default async function getDatabaseConnection({ host, user, password, data
   // we create a wrapper here, so we can easily add more drivers/db(s) later with one shared interface
   return {
     async execute(sql, ...args) {
-      const commands = sql.split(';')
+      const commands = sql
+        .replace(matchCommentsRegex,'')
+        .split(';')
         .map(cmd => cmd.trim())
         .filter(cmd => !!cmd);
 

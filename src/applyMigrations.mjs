@@ -35,7 +35,7 @@ async function applyMigration(migration, options) {
   const { stats: { id, revision, hash, version } } = config;
   const { connection } = options;
   const sql = 'INSERT INTO whoa (`id`, `revision`, `version`, `hash`) VALUES (?, ?, ?, ?)';
-  await connection.execute(sql, [ id, revision, hash, version ]);
+  await connection.execute(sql, [ id, revision, version, hash ]);
 };
 
 
