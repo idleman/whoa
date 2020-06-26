@@ -63,7 +63,7 @@ Config.json options
 
 - **main**. A list of files that should be executed, no matter the environment. See "How it works" for the format.
 - **before**. Same as "main", but will be scheduled before it.
-- **before**. Same as "main". Will be scheduled after "main", but before any "env".
+- **after**. Same as "main". Will be scheduled after "main", but before any "env".
 - **env**. Environment specific. Only if the specific environment variable: "NODE_ENV" match the child key, will its files be run.
 
 Best practices
