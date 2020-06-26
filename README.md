@@ -1,5 +1,5 @@
 Whoa - Version control for RDBMS(s) for nodejs projects
-===================================--------------------
+=======================================================
 Whoa is a simple migration tool for relational database management systems (SQL databases).
 It keeps tracks of all available database changes and let the user easy configure how
 they should be executed. Whoa will also make sure no migration is never run twice and once it

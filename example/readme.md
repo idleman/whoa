@@ -6,7 +6,6 @@ Install
 ```
 $ cd your/path/to/this/directory
 $ npm install
-
 ```
 
 Build
