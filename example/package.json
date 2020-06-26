@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "update-database": "whoa ./migrations"
+  },
+  "dependencies": {
+    "mysql2": "^2.1.0",
+    "cross-env": "^7.0.2"
+  },
+  "devDependencies": {
+    "whoa": "../"
+  }
+}

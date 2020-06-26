@@ -1,0 +1,10 @@
+{  
+  "main": [
+    ["users.sql", { "title": "Setup user schema" } ]
+  ],
+  "env": {
+    "test": [
+      ["users.test.sql", { "title": "Add test users"} ]
+    ]
+  }
+}

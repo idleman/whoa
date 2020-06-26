@@ -70,7 +70,8 @@ export default async function parseMigrationFolder(dir, { id, name, history }) {
     return null;
   }
   
-  const env = secondary.find(item => item.name === process.env.NODE_ENV) || [];
+  const _env = secondary.find(item => item.name === process.env.NODE_ENV);
+  const env = _env ? _env.info : [];
   const [main, after, before] = primary;
   
   return {
