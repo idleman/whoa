@@ -1,4 +1,4 @@
-#!/usr/bin/env node --experimental-modules
+//  #!/usr/bin/env node --experimental-modules
 import applyMigrations from '../src/applyMigrations.mjs';
 import setupMigrationTable from '../src/setupMigrationTable.mjs';
 import parseProcessArguments from '../src/parseProcessArguments.mjs';
